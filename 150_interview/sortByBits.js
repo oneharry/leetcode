@@ -3,8 +3,7 @@
  * @return {number[]}
  */
 var sortByBits = function(arr) {
-    const newArr = [];
-
+    const newArr = arr.sort((a, b) => a-b);
     const countBits = str => {
         let count = 0;
         str.split('').forEach(x => {
@@ -14,12 +13,12 @@ var sortByBits = function(arr) {
         })
         return count;
     }
-    let sortedArr = arr.sort((a, b) => {
+    let sortedArr = newArr.sort((a, b) => {
         const aBit = countBits((a >>> 0).toString(2));
         const bBit = countBits((b >>> 0).toString(2))
         return aBit - bBit;
     })
     return sortedArr;
 };
-
-console.log(sortByBits([0,1,2,3,4,5,6,7,8]))
+const myArr = [1024,512,256,128,64,32,16,8,4,2,1];
+console.log(sortByBits([1024,512,256,128,64,32,16,8,4,2,1]))
