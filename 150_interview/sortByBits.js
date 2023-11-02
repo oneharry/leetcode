@@ -21,4 +21,4 @@ var sortByBits = function(arr) {
     return sortedArr;
 };
 const myArr = [1024,512,256,128,64,32,16,8,4,2,1];
-console.log(sortByBits([1024,512,256,128,64,32,16,8,4,2,1]))
+console.log(sortByBits(myArr))
